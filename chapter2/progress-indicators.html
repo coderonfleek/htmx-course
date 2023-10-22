@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Indicators</title>
+    
+</head>
+<body>
+
+     <div hx-post="http://localhost:1330/message" 
+          hx-indicator="#my-progress-indicator">
+        Click Me and see and indicator
+
+        
+     </div>
+
+     <p id="my-progress-indicator" class="htmx-indicator">
+        Loading Content.....
+     </p>
+    
+</body>
+</html>

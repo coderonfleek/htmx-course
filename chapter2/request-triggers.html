@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Triggers</title>
+</head>
+<body>
+
+    <!--<div hx-post="http://localhost:1330/message" hx-trigger="mouseleave">
+        Make POST Request
+    </div>-->
+
+    <input type="text" hx-post="http://localhost:1330/message" 
+                       hx-trigger="change" />
+    
+</body>
+</html>

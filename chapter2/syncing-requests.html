@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
+    <title>Uploading files</title>
+</head>
+<body>
+
+    <button id="firstRequest" 
+            hx-get="http://localhost:1330" 
+            hx-target="#target1"
+            >
+        First Request
+    </button>
+
+    <button id="secondRequest"
+            hx-post="http://localhost:1330/message"
+            hx-target="#target2" 
+            hx-sync="#firstRequest:queue">
+        Next Request
+    </button>
+
+    <div id="target1">
+        <b>Target 1</b>
+    </div>
+
+    <div id="target2">
+        <b>Target 2</b>
+    </div>
+
+    
+    
+</body>
+</html>

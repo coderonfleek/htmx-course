@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sending Data</title>
+    <script>
+
+        function getPassword() {
+            return "htmxrocksagainandagain"
+        }
+    </script>
+</head>
+<body>
+
+    <!-- <form>
+
+        <input type="email" name="email" placeholder="Enter Email" />
+        <br>
+        <input type="text" name="pass" placeholder="Enter Password" />
+
+        <button hx-post="http://localhost:1330/echopayload" hx-target="#response">
+            Submit
+         </button>
+
+    </form> -->
+
+    <button hx-post="http://localhost:1330/echopayload" 
+            hx-target="#response" hx-include="#myEmailField">
+        Submit
+     </button>
+
+    <div id="response">
+
+    </div>
+
+     
+    <input type="text" name="email" id="myEmailField">
+</body>
+</html>

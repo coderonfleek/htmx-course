@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.5" integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO" crossorigin="anonymous"></script>
+
+    <script>
+        htmx.config.allowScriptTags = false;
+
+        htmx.config.allowEval = false;
+
+        //htmx.config.selfRequestsOnly = true;
+    </script>
+    
+    <title>Security Tools</title>
+
+    <button type="button" 
+            hx-post="http://localhost:1330/script" 
+            hx-target="#destination">Load Stuff</button>
+
+    <div id="destination" hx-history="false">
+        
+    </div>
+
+    
+
+</head>
+<body>
+    
+</body>
+</html>

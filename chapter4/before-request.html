@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.5" integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO" crossorigin="anonymous"></script>
+    <title>Before and After Request Events</title>
+    <script>
+
+        htmx.on("htmx:beforeRequest", (evt) => {
+
+            alert("Request about to take place");
+
+        })
+
+        htmx.on("htmx:afterRequest", (evt) => {
+            console.log(evt.detail.headers);
+        })
+        
+    </script>
+
+    <button hx-post="http://localhost:1330/message" 
+            hx-target="#destination">
+        Load Stuff
+    </button>
+
+    <div id="destination"></div> 
+    
+</head>
+<body>
+
+
+
+    
+    
+</body>
+</html>
